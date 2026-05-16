@@ -1,18 +1,28 @@
-<img 
-  src="icon.png" 
-  width="180" 
-  alt="ScrollZoom app icon"
-  align="left"
-  style="border-radius: 22%; box-shadow: 0 8px 24px rgba(0,0,0,0.25);"
- />
-<div>
-<h3>ScrollZoom</h3>
-<p>Use <b>Control + Scroll</b> to zoom in and out on macOS, similar to the default Windows behavior.</p>
-<p>Created by <b>Rudckshim</b>.</p>
+<table>
+<tr>
+<td width="220">
+
+<img src="icon.png" width="180" alt="ScrollZoom app icon"/>
+
+</td>
+
+<td>
+
+# ScrollZoom
+
+Use **Control + Scroll** to zoom in and out on macOS, similar to the default Windows behavior.
+
+Created by **Rudckshim**.
+
+<br>
+
 <a href="https://github.com/rudckshim/ScrollZoom/releases">
-  <img src="https://img.shields.io/badge/Download%20app%20for-macOS-black?style=for-the-badge&logo=apple&logoColor=white" alt="Download for macOS"/>
+  <img src="macos_badge_noborder.png" width="220" alt="Download for macOS"/>
 </a>
-</div>
+
+</td>
+</tr>
+</table>
 
 <br/><br/><br/>
 
