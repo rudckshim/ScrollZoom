@@ -14,14 +14,17 @@
 <div align="center">
 
 <a href="https://github.com/rudckshim/ScrollZoom/releases">
-  <img src="https://img.shields.io/github/downloads/rudckshim/ScrollZoom/total.svg?style=flat" alt="downloads"/>
+  <img src="https://img.shields.io/github/downloads/rudckshim/ScrollZoom/total.svg?style=flat&label=downloads" alt="downloads"/>
 </a>
+
 <a href="https://github.com/rudckshim/ScrollZoom/releases">
-  <img src="https://img.shields.io/github/v/release/rudckshim/ScrollZoom?style=flat" alt="latest version"/>
+  <img src="https://img.shields.io/github/v/release/rudckshim/ScrollZoom?style=flat&label=release" alt="release"/>
 </a>
+
 <a href="https://github.com/rudckshim/ScrollZoom/blob/main/LICENSE">
   <img src="https://img.shields.io/github/license/rudckshim/ScrollZoom.svg?style=flat" alt="license"/>
 </a>
+
 <a href="https://github.com/rudckshim/ScrollZoom">
   <img src="https://img.shields.io/badge/platform-macOS-blue.svg?style=flat" alt="platform"/>
 </a>
