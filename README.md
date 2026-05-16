@@ -1,42 +1,84 @@
-# ScrollZoom
+<img src="icon.png" width="180" alt="ScrollZoom app icon" align="left"/>
 
-Use `Control + Scroll` to zoom in and out on macOS, similar to the default Windows behavior.
+<div>
+<h3>ScrollZoom</h3>
+<p>Use <b>Control + Scroll</b> to zoom in and out on macOS, similar to the default Windows behavior.</p>
+<p>Created by <b>Rudckshim</b>.</p>
+<a href="https://github.com/rudckshim/ScrollZoom/releases">
+  <img src="https://img.shields.io/badge/Download%20app%20for-macOS-black?style=for-the-badge&logo=apple&logoColor=white" alt="Download for macOS"/>
+</a>
+</div>
 
-ScrollZoom is a lightweight native macOS menu bar utility that converts:
+<br/><br/><br/>
 
-- `Control + Scroll Up` → `⌘ +`
-- `Control + Scroll Down` → `⌘ -`
+<div align="center">
 
-This enables smooth zooming in browsers, editors, terminals, and many other apps using familiar Windows-style controls.
+<a href="https://github.com/rudckshim/ScrollZoom/releases">
+  <img src="https://img.shields.io/github/downloads/rudckshim/ScrollZoom/total.svg?style=flat" alt="downloads"/>
+</a>
+<a href="https://github.com/rudckshim/ScrollZoom/releases">
+  <img src="https://img.shields.io/github/v/release/rudckshim/ScrollZoom?style=flat" alt="latest version"/>
+</a>
+<a href="https://github.com/rudckshim/ScrollZoom/blob/main/LICENSE">
+  <img src="https://img.shields.io/github/license/rudckshim/ScrollZoom.svg?style=flat" alt="license"/>
+</a>
+<a href="https://github.com/rudckshim/ScrollZoom">
+  <img src="https://img.shields.io/badge/platform-macOS-blue.svg?style=flat" alt="platform"/>
+</a>
 
----
+</div>
+
+<hr>
+
+## Download
+
+Go to [Releases](https://github.com/rudckshim/ScrollZoom/releases) and download the latest `ScrollZoom.zip`.
 
 ## Features
 
-- Windows-style `Ctrl + Scroll` zooming on macOS
-- Lightweight native Swift app
-- Menu bar integration
+- Windows-style `Control + Scroll` zooming on macOS
+- Lightweight native Swift menu bar app
 - Start at Login support
 - No Dock icon
 - Accessibility-aware event handling
 - Works across most macOS applications
 
----
+## How to use
 
-## Installation
+1. Download `ScrollZoom.zip` from [Releases](https://github.com/rudckshim/ScrollZoom/releases)
+2. Unzip the file
+3. Move `ScrollZoom.app` to your Applications folder
+4. Open `ScrollZoom.app`
+5. Allow the required permissions when prompted
 
-Download the latest release from the Releases page.
+Required permissions:
 
-### First Launch
+- Accessibility
+- Input Monitoring
 
-macOS may block the app initially.
+You can manage them in:
 
-If needed:
+`System Settings → Privacy & Security`
 
-1. Right click `ScrollZoom.app`
-2. Click **Open**
+## Usage
 
-or run:
+Hold `Control` and scroll up or down to zoom in and out.
 
-```bash
-xattr -dr com.apple.quarantine /Applications/ScrollZoom.app
+ScrollZoom converts:
+
+- `Control + Scroll Up` → `⌘ +`
+- `Control + Scroll Down` → `⌘ -`
+
+## Build
+
+```sh
+swiftc scrollzoom.swift \
+-framework Cocoa \
+-framework ApplicationServices \
+-framework ServiceManagement \
+-o ScrollZoom
+```
+
+## License
+
+MIT License
