@@ -1,5 +1,10 @@
-<img src="icon.png" width="180" alt="ScrollZoom app icon" align="left"/>
-
+<img 
+  src="icon.png" 
+  width="180" 
+  alt="ScrollZoom app icon"
+  align="left"
+  style="border-radius: 22%; box-shadow: 0 8px 24px rgba(0,0,0,0.25);"
+ />
 <div>
 <h3>ScrollZoom</h3>
 <p>Use <b>Control + Scroll</b> to zoom in and out on macOS, similar to the default Windows behavior.</p>
