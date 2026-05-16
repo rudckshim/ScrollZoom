@@ -3,7 +3,6 @@
 <div>
 <h3>ScrollZoom</h3>
 <p>Use <b>Control + Scroll</b> to zoom in and out on macOS, similar to the default Windows behavior.</p>
-<p>Created by <b>Rudckshim</b>.</p>
 <a href="https://github.com/rudckshim/ScrollZoom/releases">
   <img src="macos_badge_noborder.png" width="175" alt="Download for macOS"/>
 </a>
