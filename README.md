@@ -12,21 +12,15 @@
 <br/><br/>
 
 <div align="center">
-<a href="https://github.com/rudckshim/ScrollZoom/releases">
-  <img src="https://img.shields.io/github/downloads/rudckshim/ScrollZoom/total.svg?style=flat" alt="downloads"/>
-</a>
 
-<a href="https://github.com/rudckshim/ScrollZoom/releases">
-  <img src="https://img.shields.io/github/release-pre/rudckshim/ScrollZoom.svg?style=flat" alt="latest version"/>
-</a>
+<img src="https://img.shields.io/github/downloads/rudckshim/ScrollZoom/total.svg?style=flat" alt="downloads"/>
 
-<a href="https://github.com/rudckshim/ScrollZoom/blob/main/LICENSE">
-  <img src="https://img.shields.io/github/license/rudckshim/ScrollZoom.svg?style=flat" alt="license"/>
-</a>
+<img src="https://img.shields.io/github/release-pre/rudckshim/ScrollZoom.svg?style=flat" alt="latest version"/>
 
-<a href="https://github.com/rudckshim/ScrollZoom">
-  <img src="https://img.shields.io/badge/platform-macOS-blue.svg?style=flat" alt="platform"/>
-</a>
+<img src="https://img.shields.io/github/license/rudckshim/ScrollZoom.svg?style=flat" alt="license"/>
+
+<img src="https://img.shields.io/badge/platform-macOS-blue.svg?style=flat" alt="platform"/>
+
 </div>
 
 <hr>
