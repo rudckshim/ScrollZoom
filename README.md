@@ -1,4 +1,4 @@
-<img src="readmeicon.png" width="32%" alt="App icon" align="left"/>
+<img src="readmeicon.png" width="25%" alt="App icon" align="left"/>
 
 <div>
 <h3>ScrollZoom</h3>
