@@ -1,12 +1,12 @@
-<table>
+<table border="0">
 <tr>
-<td width="35%">
+<td width="32%" valign="top">
 
 <img src="readmeicon.png" width="100%" alt="App icon"/>
 
 </td>
 
-<td>
+<td valign="top">
 
 <h1>ScrollZoom</h1>
 
@@ -15,7 +15,7 @@ Use <b>Control + Scroll</b> to zoom in and out on macOS, similar to the default 
 </p>
 
 <a href="https://github.com/rudckshim/ScrollZoom/releases">
-  <img src="macos_badge_noborder.png" width="175" alt="Download for macOS"/>
+  <img src="macos_badge_noborder.png" width="100%" style="min-width:120px; max-width:175px;" alt="Download for macOS"/>
 </a>
 
 </td>
