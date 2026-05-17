@@ -1,4 +1,9 @@
+*.dmg
+*.zip
 ScrollZoom
 *.app
-*.zip
+rw.*.dmg
+dmg/
 .DS_Store
+Picture1.png
+Picture1-resized.png

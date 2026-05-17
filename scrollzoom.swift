@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  scrollzoom.swift
 //  scrollzoom
 //
 
@@ -34,9 +34,11 @@ enum Key: CGKeyCode {
 class EventTap {
 
     static var rloop_source: CFRunLoopSource! = nil
-
-    // Control 키가 눌려 있는지 추적
     static var controlDown = false
+
+    // Trackpad sensitivity control
+    static var trackpadAccumulator: Int64 = 0
+    static let trackpadThreshold: Int64 = 18
 
     class func create() {
         if rloop_source != nil {
@@ -74,14 +76,31 @@ class EventTap {
 
         case .flagsChanged:
             EventTap.controlDown = event.flags.contains(.maskControl)
+
+            if !EventTap.controlDown {
+                EventTap.trackpadAccumulator = 0
+            }
+
             return event
 
         case .scrollWheel:
-            let delta_y = event.getIntegerValueField(.scrollWheelEventDeltaAxis1)
+            let controlPressed = EventTap.controlDown || event.flags.contains(.maskControl)
 
-            // Control 누른 상태에서는 스크롤 이벤트를 앱으로 넘기지 않음
-            if EventTap.controlDown || event.flags.contains(.maskControl) {
-                let key: Key = (delta_y > 0) ? .plus : .minus
+            guard controlPressed else {
+                EventTap.trackpadAccumulator = 0
+                return event
+            }
+
+            let lineDelta = event.getIntegerValueField(.scrollWheelEventDeltaAxis1)
+            let pointDelta = event.getIntegerValueField(.scrollWheelEventPointDeltaAxis1)
+            let fixedDelta = event.getIntegerValueField(.scrollWheelEventFixedPtDeltaAxis1)
+
+            let isLikelyMouseWheel = lineDelta != 0 && abs(pointDelta) >= 10
+
+            if isLikelyMouseWheel {
+                EventTap.trackpadAccumulator = 0
+
+                let key: Key = lineDelta > 0 ? .plus : .minus
 
                 key.press(true, true)
                 key.press(false, true)
@@ -89,7 +108,36 @@ class EventTap {
                 return nil
             }
 
-            return event
+            let trackpadDelta: Int64
+
+            if pointDelta != 0 {
+                trackpadDelta = pointDelta
+            } else if fixedDelta != 0 {
+                trackpadDelta = fixedDelta / 65536
+            } else {
+                trackpadDelta = lineDelta
+            }
+
+            if trackpadDelta == 0 {
+                return nil
+            }
+
+            if EventTap.trackpadAccumulator.signum() != trackpadDelta.signum() {
+                EventTap.trackpadAccumulator = 0
+            }
+
+            EventTap.trackpadAccumulator += trackpadDelta
+
+            if abs(EventTap.trackpadAccumulator) >= EventTap.trackpadThreshold {
+                let key: Key = EventTap.trackpadAccumulator > 0 ? .plus : .minus
+
+                key.press(true, true)
+                key.press(false, true)
+
+                EventTap.trackpadAccumulator = 0
+            }
+
+            return nil
 
         case .keyDown, .keyUp:
             return event
@@ -112,13 +160,6 @@ extension CGEventTap {
     fileprivate class func create(
         callback: @escaping CGEventTapCallBack
     ) -> CGEventTap? {
-
-        /*
-            keyDown = 10
-            keyUp = 11
-            flagsChanged = 12
-            scrollWheel = 22
-        */
 
         let mask: UInt32 =
             (1 << CGEventType.keyDown.rawValue) |
@@ -261,11 +302,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func updateLoginItemState() {
-        if SMAppService.mainApp.status == .enabled {
-            loginItem.state = .on
-        } else {
-            loginItem.state = .off
-        }
+        loginItem.state = SMAppService.mainApp.status == .enabled ? .on : .off
     }
 
     @objc func quit() {
