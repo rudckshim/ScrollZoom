@@ -1,7 +1,15 @@
-<img src="readmeicon.png" width="200" style="max-width:35%; height:auto;" alt="App icon" align="left"/>
+<table>
+<tr>
+<td width="35%">
 
-<div>
-<h3>ScrollZoom</h3>
+<img src="readmeicon.png" width="100%" alt="App icon"/>
+
+</td>
+
+<td>
+
+<h1>ScrollZoom</h1>
+
 <p>
 Use <b>Control + Scroll</b> to zoom in and out on macOS, similar to the default Windows behavior.
 </p>
@@ -9,7 +17,10 @@ Use <b>Control + Scroll</b> to zoom in and out on macOS, similar to the default 
 <a href="https://github.com/rudckshim/ScrollZoom/releases">
   <img src="macos_badge_noborder.png" width="175" alt="Download for macOS"/>
 </a>
-</div>
+
+</td>
+</tr>
+</table>
 
 <br/><br/>
 
