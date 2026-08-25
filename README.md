@@ -3,9 +3,7 @@
 <div>
 <h3>ScrollZoom</h3>
 <p>
-A lightweight macOS utility that brings Windows-style <b>Ctrl + scroll</b> zooming to your Mac.
-</p>
-<p>
+A lightweight macOS utility that brings Windows-style <b>Ctrl + scroll</b> zooming to your Mac.<br>
 Hold the Control key and scroll with your mouse or trackpad to zoom in and out in supported apps.
 </p>
 
